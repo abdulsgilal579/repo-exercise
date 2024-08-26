@@ -1,0 +1,18 @@
+def outed(meet, boss):
+    total_happiness = 0
+    number_of_people = len(meet)
+    
+    for person, rating in meet.items():
+        if person == boss:
+            total_happiness += 2 * rating  # Boss's rating is doubled
+        else:
+            total_happiness += rating
+    
+    average_happiness = total_happiness / number_of_people
+    
+    if average_happiness <= 5:
+        return 'Get Out Now!'
+    else:
+        return 'Nice Work Champ!'
+
+
